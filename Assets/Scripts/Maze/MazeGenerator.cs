@@ -3,16 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MazeGenerator : MonoBehaviour {
+    public static MazeGenerator instance;
+
 	public Transform CellPrefab;
-	public Vector3 GridSize;
+    public Vector3 GridSize;
 	public float Buffer = 1;
 
+    [HideInInspector]
 	public List<Transform> Set = new List<Transform>();
-	public List<Transform> CompletedSet = new List<Transform>();
-	public List<Vector3> Directions = new List<Vector3>();
+    [HideInInspector]
+    public static List<Transform> CompletedSet = new List<Transform>();
+    [HideInInspector]
+    public List<Vector3> Directions = new List<Vector3>();
 
 	void Awake () {
-		Directions.Add (new Vector3 (0, 0, 1));
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+
+        Directions.Add (new Vector3 (0, 0, 1));
 		Directions.Add (new Vector3 (1, 0, 0));
 		Directions.Add (new Vector3 (0, 0, -1));
 		Directions.Add (new Vector3 (-1, 0, 0));
@@ -56,6 +66,7 @@ public class MazeGenerator : MonoBehaviour {
 	void FindNext () {
 		if (Set.Count == 0) {
 			CancelInvoke ("FindNext");
+            GameManager.instance.SpawnElements();
 			return;
 		}
 		
@@ -116,4 +127,9 @@ public class MazeGenerator : MonoBehaviour {
 		GridSize.z = sizeZ;
 		Start ();
 	}
+
+    public List<Transform> GetCells ()
+    {
+        return CompletedSet;
+    }
 }

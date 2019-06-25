@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: b5b9f25d096027242b641c33add1b5ed
+guid: 49144ef2074bd0f4fb7819417ada23a6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
   - playerPrefab: {fileID: 7062477236277496184, guid: 712bbb3720454d340a4700290d7cef5f,
+      type: 3}
+  - crystalPrefab: {fileID: 8963779928928522119, guid: 7541d1115300dd7448a620b4ab70c339,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

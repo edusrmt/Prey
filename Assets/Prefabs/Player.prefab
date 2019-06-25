@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7062477236282511512}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 7062477236269848894}
   - component: {fileID: 9005706739711497799}
   - component: {fileID: 1468895179464717636}
+  - component: {fileID: 7213495484559237901}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -433,3 +434,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charge: 5
+--- !u!114 &7213495484559237901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062477236277496186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56a856528e28c2479258b3c17772146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
