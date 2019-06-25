@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 001a77f0470f4924fbb06e9201e4bbee
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ArmL
+    100004: ArmR
+    100006: ArmRootL
+    100008: ArmRootR
+    100010: ClawBackL
+    100012: ClawBackLL
+    100014: ClawBackR
+    100016: ClawBackRL
+    100018: ClawFrontL
+    100020: ClawFrontLH
+    100022: ClawFrontR
+    100024: ClawFrontRH
+    100026: Floor
+    100028: FloorLH
+    100030: FloorLL
+    100032: FloorRH
+    100034: FloorRL
+    100036: ForearmFrontL
+    100038: ForearmFrontR
+    100040: ForeLegL
+    100042: ForeLegR
+    100044: Head
+    100046: JawL
+    100048: JawR
+    100050: JawRootL
+    100052: JawRootR
+    100054: JL
+    100056: JR
+    100058: LegL
+    100060: LegR
+    100062: LegRootL
+    100064: LegRootR
+    100066: LH
+    100068: LH_001
+    100070: LL
+    100072: MasterBone
+    100074: Neck
+    100076: RH
+    100078: RL
+    100080: Roach
+    100082: //RootNode
+    100084: Shoulder
+    100086: SpineHigh
+    100088: SpineLow
+    100090: Tail
+    100092: Tail2
+    100094: Tail3
+    100096: TailEnd
+    100098: TailEndM
+    100100: TongeRoot
+    100102: Tongue
+    100104: Tongue2
+    100106: Tongue3
+    100108: Tongue4
+    100110: TongueEnd
+    100112: TongueEndM
+    400000: Armature
+    400002: ArmL
+    400004: ArmR
+    400006: ArmRootL
+    400008: ArmRootR
+    400010: ClawBackL
+    400012: ClawBackLL
+    400014: ClawBackR
+    400016: ClawBackRL
+    400018: ClawFrontL
+    400020: ClawFrontLH
+    400022: ClawFrontR
+    400024: ClawFrontRH
+    400026: Floor
+    400028: FloorLH
+    400030: FloorLL
+    400032: FloorRH
+    400034: FloorRL
+    400036: ForearmFrontL
+    400038: ForearmFrontR
+    400040: ForeLegL
+    400042: ForeLegR
+    400044: Head
+    400046: JawL
+    400048: JawR
+    400050: JawRootL
+    400052: JawRootR
+    400054: JL
+    400056: JR
+    400058: LegL
+    400060: LegR
+    400062: LegRootL
+    400064: LegRootR
+    400066: LH
+    400068: LH_001
+    400070: LL
+    400072: MasterBone
+    400074: Neck
+    400076: RH
+    400078: RL
+    400080: //RootNode
+    400082: Roach
+    400084: Shoulder
+    400086: SpineHigh
+    400088: SpineLow
+    400090: Tail
+    400092: Tail2
+    400094: Tail3
+    400096: TailEnd
+    400098: TailEndM
+    400100: TongeRoot
+    400102: Tongue
+    400104: Tongue2
+    400106: Tongue3
+    400108: Tongue4
+    400110: TongueEnd
+    400112: TongueEndM
+    2100000: Roach__Roach_png
+    4300000: Roach
+    7400000: Default Take
+    7400002: ArmatureAction
+    7400004: ArmatureAction_001
+    7400006: ArmatureAction_002
+    7400008: ArmatureAction_003
+    7400010: ArmatureAction_004
+    7400012: ArmatureAction_005
+    7400014: ArmatureAction_006
+    7400016: ArmatureAction_009
+    7400018: PoseLib
+    7400020: Walk
+    9500000: //RootNode
+    13700000: Roach
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roach__Roach_png
+    second: {fileID: 2100000, guid: 18039a7f1fb1c1b46aa6df418be32716, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
