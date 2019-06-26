@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 [RequireComponent(typeof(Camera))]
 public class PlayerAim : MonoBehaviour
 {
-    public int range = 7;
+    public int range = 4;
     Vector3 screenCenter;
     Camera cam;
 

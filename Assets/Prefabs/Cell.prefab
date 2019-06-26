@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33970361058261860}
   - component: {fileID: 65967574771986818}
   - component: {fileID: 23372442294793022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 33154135295352704}
   - component: {fileID: 65960565574330822}
   - component: {fileID: 23318310726512022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 33707154622058580}
   - component: {fileID: 65185628249617582}
   - component: {fileID: 23310579450840174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Corner SE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 33035778616515368}
   - component: {fileID: 65010437552377404}
   - component: {fileID: 23867574988036898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Corner NE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 33557139966842748}
   - component: {fileID: 65628695095824450}
   - component: {fileID: 23875672253719074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Corner SW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 33040781126385658}
   - component: {fileID: 65141399837203830}
   - component: {fileID: 23334085001078476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Corner NW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 33174131009419844}
   - component: {fileID: 65303377979859418}
   - component: {fileID: 23385433989208428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall N
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 33550527384158526}
   - component: {fileID: 65002353785992958}
   - component: {fileID: 23173404810334586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall S
   m_TagString: Untagged
   m_Icon: {fileID: 0}

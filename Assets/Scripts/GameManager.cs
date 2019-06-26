@@ -7,7 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public GameObject playerPrefab;
+    public GameObject roachPrefab;
     public GameObject crystalPrefab;
+
+    GameObject player;
+    GameObject roach;
 
     Text messenger;
     int crystalsCollected = 0;
@@ -41,7 +45,7 @@ public class GameManager : MonoBehaviour
         // Spawn the player at a random position
         Transform playerCell = MazeGenerator.instance.GetCells()[Random.Range(0, MazeGenerator.instance.GetCells().Count)];
         Vector3 playerPosition = new Vector3(playerCell.position.x, 1.5f, playerCell.position.z);
-        GameObject player = Instantiate(playerPrefab, playerPosition, Quaternion.identity);
+        player = Instantiate(playerPrefab, playerPosition, Quaternion.identity);
         player.name = "Player";
 
         // Spawn seven star crystals at random positions
@@ -63,6 +67,29 @@ public class GameManager : MonoBehaviour
             GameObject crystal = Instantiate(crystalPrefab, crystalPosition, Quaternion.identity, crystalsParent.transform);
             crystal.name = "Crystal " + (i + 1);
         }
+    }
+
+    void SpawnRoach ()
+    {
+        // Update A* path to the current maze
+        AstarPath.active.Scan();
+
+        // Spawn roach
+        Transform roachCell = MazeGenerator.instance.GetCells()[Random.Range(0, MazeGenerator.instance.GetCells().Count)];
+        Vector3 roachPosition = new Vector3(roachCell.position.x, 1.5f, roachCell.position.z);
+
+        // Make sure the roach won't spawn too close to the player
+        while (Vector3.Distance(player.transform.position, roachPosition) < 70)
+        {
+            roachCell = MazeGenerator.instance.GetCells()[Random.Range(0, MazeGenerator.instance.GetCells().Count)];
+            roachPosition = new Vector3(roachCell.position.x, 1.5f, roachCell.position.z);
+        }
+
+        roach = Instantiate(roachPrefab, roachPosition, Quaternion.identity);
+        roach.name = "Roach";
+
+        RoachAI ai = roach.GetComponent<RoachAI>();
+        ai.target = player.transform;
     }
 
     public void VisibleCrystal (bool currentVisibility)
@@ -88,6 +115,10 @@ public class GameManager : MonoBehaviour
     public void CrystalCollected ()
     {
         crystalsCollected++;
+
+        if (crystalsCollected == 1)
+            SpawnRoach();
+
         StartCoroutine(ShowMessage("Collected " + crystalsCollected + "/7 Crystals", 2f));        
     }
 
