@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,13 +34,7 @@ public class GameManager : MonoBehaviour
         messenger = GameObject.Find("Messenger").GetComponent<Text>();
         messenger.enabled = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void SpawnElements ()
     {
         // Spawn the player at a random position
@@ -67,6 +62,7 @@ public class GameManager : MonoBehaviour
             GameObject crystal = Instantiate(crystalPrefab, crystalPosition, Quaternion.identity, crystalsParent.transform);
             crystal.name = "Crystal " + (i + 1);
         }
+
     }
 
     void SpawnRoach ()
@@ -89,7 +85,7 @@ public class GameManager : MonoBehaviour
         roach.name = "Roach";
 
         RoachAI ai = roach.GetComponent<RoachAI>();
-        ai.target = player.transform;
+        ai.player = player.transform;
     }
 
     public void VisibleCrystal (bool currentVisibility)
@@ -119,7 +115,19 @@ public class GameManager : MonoBehaviour
         if (crystalsCollected == 1)
             SpawnRoach();
 
+        if (crystalsCollected == 7)
+            GameObject.Find("Roach").GetComponent<RoachAI>().KillPlayer();
+
         StartCoroutine(ShowMessage("Collected " + crystalsCollected + "/7 Crystals", 2f));        
+    }
+
+    public void GameOver ()
+    {
+        //player.GetComponentInChildren<Camera>().enabled = false;
+        //player.GetComponentInChildren<AudioListener>().enabled = false;
+        Destroy(player);
+        GameObject.Find("Death Camera").GetComponent<Camera>().enabled = true;
+        Invoke("ReloadLevel", 1.8f);
     }
 
     IEnumerator ShowMessage (string message, float delay)
@@ -130,5 +138,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         messenger.enabled = false;
         isBusy = false;
+    }
+
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 }
